@@ -10,6 +10,7 @@ on:
 
 jobs:
   test:
+    permissions: write-all
     runs-on: ubuntu-latest
 
     steps:
@@ -34,8 +35,7 @@ jobs:
 
       - name: Pytest coverage comment
         uses: MishaKav/pytest-coverage-comment@main
-        permissions: read-all
         with:
-          github-token: ${{github.token}}
+          # github-token: ${{github.token}}
           pytest-coverage-path: ./pytest-coverage.txt
           junitxml-path: ./pytest.xml
