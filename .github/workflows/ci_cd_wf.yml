@@ -34,6 +34,7 @@ jobs:
 
       - name: Pytest coverage comment
         uses: MishaKav/pytest-coverage-comment@main
+        permissions: read-all
         with:
           github-token: ${{github.token}}
           pytest-coverage-path: ./pytest-coverage.txt
